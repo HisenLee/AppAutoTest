@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<software-group>
+  <software name="testscript">
+    <latest-version-code>65</latest-version-code>
+    <latest-version>v6.5</latest-version>
+    <latest-version-abspath>/home/xblia2/ReleaseVer/cats_release/TestService</latest-version-abspath>
+    <latest-version-startup>TestServerClient_vx.jar</latest-version-startup>
+    <latest-version-detail>
+      <item name="New features">
+        <detail>1.Version upgrade component has been integrated into the tool.</detail>
+      </item>
+      <item name="Fix issues">
+        <detail>1.Resolved bugs.</detail>
+        <detail>2.推荐使用新版本.</detail>
+      </item>
+    </latest-version-detail>
+    <ignore-files>
+      <item>aapt</item>
+      <item>aapt.exe</item>
+      <item>adb</item>
+      <item>adb.exe</item>
+      <item>AdbWinApi.dll</item>
+      <item>AdbWinUsbApi.dll</item>
+    </ignore-files>
+  </software>
+  <software name="pc_tools">
+    <latest-version-code>52</latest-version-code>
+    <latest-version>PC_Tools_V5.2</latest-version>
+    <latest-version-abspath>/home/xblia2/ReleaseVer/cats_release/PC_Tools</latest-version-abspath>
+    <latest-version-startup>PC_Tools.jar</latest-version-startup>
+    <latest-version-detail>
+      <item name="～">
+        <detail>程序员小丫为了修改UI和整体重构优化， 夜夜与代码为伴</detail>
+        <detail>从部门最帅的骚年，熬成了胡子一大把的大叔</detail>
+        <detail>在倒下前小丫拉着我的手说：</detail>
+        <detail>"新版本这么赞，我想发出去看看。"</detail>
+        <detail>.</detail>
+        <detail>所以， 升级!升级!升级! 重要的事情说三遍！.</detail>
+      </item>
+      <item name="更新部分">
+        <detail>1.launch time计算时监测crash信息</detail>
+        <detail>1.优化launch time处理的相关逻辑</detail>
+      </item>
+    </latest-version-detail>
+    <ignore-files>
+      <item>aapt</item>
+      <item>aapt.exe</item>
+      <item>adb</item>
+      <item>adb.exe</item>
+      <item>AdbWinApi.dll</item>
+      <item>AdbWinUsbApi.dll</item>
+    </ignore-files>
+  </software>
+  <software name="easy_transfer">
+    <latest-version-code>70</latest-version-code>
+    <latest-version>EasyTransferV7.0</latest-version>
+    <latest-version-abspath>/home/xblia2/ReleaseVer/cats_release/EasyTranfer</latest-version-abspath>
+    <latest-version-startup>EasyTranferX.jar</latest-version-startup>
+    <latest-version-detail>
+      <item name="有重要更新！！！">
+        <detail>Duang 2016年的第一个版本~~~</detail>
+        <detail>新版本发布啦，主要更新如下</detail>
+        <detail>1.统一了整体UI风格</detail>
+        <detail>2.部分的性能优化</detail>
+        <detail>3.增加和文件夹检测，当有文件改变或新增文件时会自动传输</detail>
+        <detail>4.其它的Bug修复</detail>
+      </item>
+    </latest-version-detail>
+    <ignore-files>
+      <item>about</item>
+    </ignore-files>
+  </software>
+  <software name="topn_analyzer">
+    <latest-version-code>11</latest-version-code>
+    <latest-version>TopN Analyzer. V1.1</latest-version>
+    <latest-version-abspath>/home/xblia2/ReleaseVer/cats_release/TopNAnalyzer</latest-version-abspath>
+    <latest-version-startup>TopNAnalyzer_v1.1.jar</latest-version-startup>
+    <latest-version-detail>
+      <item name="New features">
+        <detail>Add md5 columns to excel file</detail>
+      </item>
+      <item name="Fix issues">
+        <detail>1.Resolved some bugs.</detail>
+        <detail>2.推荐使用新版本.</detail>
+      </item>
+    </latest-version-detail>
+    <ignore-files />
+  </software>
+  <software name="PRC_Downloader">
+    <latest-version-code>19</latest-version-code>
+    <latest-version>v1.9</latest-version>
+    <latest-version-abspath>/home/xblia2/ReleaseVer/cats_release/Downloader_internal</latest-version-abspath>
+    <latest-version-startup>PRC_APK_Downloader.jar</latest-version-startup>
+    <latest-version-detail>
+      <item name="New features">
+        <detail>1.Display app icons</detail>
+        <detail>2.Discard some deprecated functions</detail>
+      </item>
+      <item name="Fix issues">
+        <detail>1.Resolved download big file fail problem.</detail>
+        <detail>2.Resolved UI dead problem.</detail>
+        <detail>3.fix some bugs.</detail>
+      </item>
+    </latest-version-detail>
+    <ignore-files />
+  </software>
+  <software name="ITT">
+    <latest-version-code>35</latest-version-code>
+    <latest-version>v3.5</latest-version>
+    <latest-version-abspath>/home/xblia2/ReleaseVer/cats_release/ITT</latest-version-abspath>
+    <latest-version-startup>InteractiveTestTool.jar</latest-version-startup>
+    <latest-version-detail>
+      <item name="Fix issues">
+        <detail>1.解决测试应用太多导致测试中断问题</detail>
+      </item>
+    </latest-version-detail>
+    <ignore-files>
+      <item>aapt</item>
+      <item>aapt.exe</item>
+      <item>adb</item>
+      <item>adb.exe</item>
+      <item>AdbWinApi.dll</item>
+      <item>AdbWinUsbApi.dll</item>
+    </ignore-files>
+  </software>
+  <software name="ApkInfoToExcel">
+    <latest-version-code>41</latest-version-code>
+    <latest-version>v4.1</latest-version>
+    <latest-version-abspath>/home/xblia2/ReleaseVer/cats_release/ApkInfoToExcel</latest-version-abspath>
+    <latest-version-startup>ApkInfoToExcel.exe</latest-version-startup>
+    <latest-version-detail>
+      <item name="New features">
+        <detail>1.整体重构，使用更方便</detail>
+        <detail>2.生成列表中增加MainActivity字段，并以Top3600榜单的column顺序展示</detail>
+        <detail>3.记录用户操作数据，如路径等</detail>
+      </item>
+      <item name="Fix issues">
+        <detail>1.增加版本自动升级功能.</detail>
+      </item>
+    </latest-version-detail>
+    <ignore-files />
+  </software>
+</software-group>

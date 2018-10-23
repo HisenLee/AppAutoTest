@@ -1,0 +1,73 @@
+
+流程
+1.ITTMainFrameUI.java
+	a.调用beginTest() 启动 ITTTestingFrame.java
+
+2.ITTTestingFrame.java
+	2a.调用initTestComponent()
+		a1.registeDeviceStatusListener 注册设备监听，监听设备是否OFFLINE，以及设备电量情况
+	
+		a2.遍历selectDevices，有几个device，就new 几个DeviceGroupTestingPanel,
+	 	        并调用DeviceGroupTestingPanel的setControler(androidDeviceGroup)方法
+	   	        把AndroidDeviceGroup线程传递进去，来控制结束之后打开文件夹的Action
+			a21.DeviceGroupTestingPanel.java的流程
+				I.只是在构造方法里创建整体UI的进度条
+				II. 执行packPanel方法来布局真正的DeviceTestingPanel，有几个Device，就有几个DeviceTestingPanel。
+					创建之后会把创建的几个DeviceTestingPanel往上层返回到2b处，即ITTTestingFrame.java中来调用layoutDeviceGroupPanel来布局。
+				III.在DeviceTestingPanel.java中只是创建了一些界面UI,并把进度通过接口往上层返回
+		
+		a3.遍历的同时，开启AndroidDeviceGroup线程
+			a31.开启AndroidDeviceGroup线程的作用和流程
+				a311.AndroidDeviceGroup线程实现了ITaskControler接口，来获取任务和得到任务
+				a312.创建1个队列BlockingQueue来管理TestApkInfo实体
+				a313.创建一个线程集合androidApkTesters,有几个设备，就有几个AndroidApkTester线程
+				a314.initPaths 在电脑上的Apk根路径创建ITT_WORKSPACE工作区间
+				a315.initTestResultFile 根据TEMPLATE_RESULT.xlsx模板在本地Workspace创建result表格
+				a316.clearDeviceApp 根据deviceID卸载device上的非系统应用并清除空间[跳转至3]
+				a317.initTestFiles：在ITTMgr中根据java -jar InteractiveTestTool.jar 来判断是否有正在运行的Jar文件，
+									如果有，则继续运行，如果没有，则说明已经运行结束All files have been tested before
+				a318.initProgressInfo:做一些初始化工作
+				a319.launchTester:开启AndroidApkTester线程，有几个设备，就开启几个AndroidApkTester线程[跳转至4]
+				
+		a4.维系一个总的taskControlerList，来管理设备Group。每1个设备Group都有自己独立的TaskController。
+	
+	
+	2b.调用layoutDeviceGroupPanel来布局，有几个device，就有几个GroupPanel
+	
+3.分析clearDeviceApp[接上a316]
+	a.遍历每一台设备，根据deviceId调用ClearAllApp.unInstallAll()来清除非系统应用和占用内存
+	b.调用adb shell deviceId pm list packages 列出所有的package，并放入PackageList集合中
+	c.调用clearCacheApp()方法，执行adb -s deviceSerialNo shell rm -rf /data/local/tmp/*.apk 来clearCacheApp
+	d.遍历PackageList，再挨个传入PackageName调用remove()方法, 
+		即启动PkgUninstaller线程，运行adb uninstall packagename/ adb -s deviceNo uninstall packagename
+
+4.分析AndroidApkTester线程[接上a319]
+	a.有几个device, 就开启几个AndroidApkTester线程
+	
+	
+
+PkgInstaller.java
+	run():installedTmpFileClearer.tryDelTmpFile()
+	
+	
+	4.18---add apkName/Version
+		result表格中加字段需要修改的类add apkVersion/appName:
+		0.先修改工程目录下的TEMPLATE_RESULT.xlsx
+		1.TestStatusPrepare.java
+		2.TestApkInfo.java
+		3.TestResult.java
+		4.ParseApk.java
+		5.exceleperate.java
+	
+	4.19---2:35PM 修改了InstalledTmpFileClearer,
+		否则PkgInstaller.java run()方法中installedTmpFileClearer.tryDelTmpFile()根本走不进去，path永远==null，
+		所有无法清除device中的缓存apk   /data/locat/tmp/*.apk
+	
+	4.20---11:21PM 
+		a.修改了CommonTestStatus.java Line157 add remove /sdcard/*.mp4
+		b.修改了PkgUninstaller.java add remove *.png(removePng1&removePng2)
+		
+
+
+
+

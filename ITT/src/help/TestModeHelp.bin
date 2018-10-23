@@ -1,0 +1,4 @@
+In fixed mode, application's testing number is certain, 
+even failed,it will continue testing till the specified number.
+In lazy mode, test will abort if the test failed and no other
+available devices.

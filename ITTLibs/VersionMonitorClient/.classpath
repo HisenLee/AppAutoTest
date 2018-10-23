@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="libs/fastjson-1.1.28.jar"/>
+	<classpathentry kind="lib" path="http-libs/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="http-libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="http-libs/fluent-hc-4.5.jar"/>
+	<classpathentry kind="lib" path="http-libs/httpclient-4.5.jar"/>
+	<classpathentry kind="lib" path="http-libs/httpclient-cache-4.5.jar"/>
+	<classpathentry kind="lib" path="http-libs/httpclient-win-4.5.jar"/>
+	<classpathentry kind="lib" path="http-libs/httpcore-4.4.1.jar"/>
+	<classpathentry kind="lib" path="http-libs/httpmime-4.5.jar"/>
+	<classpathentry kind="lib" path="http-libs/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="http-libs/jna-platform-4.1.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/VersionMonitorMsg"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CommonsDefUI"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

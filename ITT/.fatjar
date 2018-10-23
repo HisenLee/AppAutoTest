@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Tue Apr 17 14:17:08 CST 2018
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=C\:\\Users\\haixingX\\Desktop\\ITT\\InteractiveTestTool.jar
+manifest.mergeall=true
+manifest.mainclass=com.itt.ui.ITTMainFrameUI
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=
+includes=
